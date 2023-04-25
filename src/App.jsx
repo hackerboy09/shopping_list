@@ -51,7 +51,7 @@ const handleItemChecked = (e) => {
         <h1>Shopping List</h1>
         </div>
         <div className="col text-end mt-2">
-          <NewItemButton />
+          <NewItemButton listItems={listItems} setListItems={setListItems} />
         </div>
       </div>
       <hr />
@@ -72,7 +72,7 @@ const handleItemChecked = (e) => {
       <hr />
       <div className="row">
       <div className="col text-end">
-      <NewItemButton />
+      <NewItemButton listItems={listItems} setListItems={setListItems} />
       </div>
       </div>
 
