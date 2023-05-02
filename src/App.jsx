@@ -53,19 +53,25 @@ function App() {
         </div>
         <div className="col text-end mt-1">
           <ClearListButton setListItems={setListItems} />
-          <NewItemButton listItems= {listItems} setListItems={setListItems} />
+          <NewItemButton listItems={listItems} setListItems={setListItems} />
         </div>
       </div>
       <hr />
       {
+        listItems.length === 0 && (
+          <div>
+            <h3>Your list is empty</h3>
+            Please add new item to start.
+          </div>
+        )
+      }
+      {
         listItems.map((item) => (
           <ListItem
-            id={item.id}
-            name={item.name}
-            quantity={item.quantity}
-            unit={item.unit}
-            checked={item.checked}
+            item={item}
             handleItemChecked={handleItemChecked}
+            listItems={listItems}
+            setListItems={setListItems}
           />
         ))
       }
