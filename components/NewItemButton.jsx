@@ -26,7 +26,7 @@ const {value} = await Swal.fire({
 setListItems([
   ...listItems,
   {
-    id: listItems.lengh + 1,
+    id: `${listItems.lengh + 1}`,
     ...value,
     checked :false,
   }
