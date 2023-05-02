@@ -13,6 +13,7 @@ const ClearListButton = ({ setListItems }) => {
             cancelButtonColor: '#d33',
         })
         if (isConfirmed) {
+            localStorage.setItem("listItems", JSON.stringify([]));
             setListItems([])
         }
     }
